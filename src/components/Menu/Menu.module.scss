@@ -1,0 +1,44 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  border-bottom: 1px solid #f1f0f0;
+  padding: 0 64px;
+}
+
+.logoButtonsColumn {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 100px;
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+}
+
+.menuItem {
+  color: #231e1e;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  margin-right: 48px;
+}
+
+.contact {
+  all: unset;
+  cursor: pointer;
+  color: #231e1e;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  background-color: #dac2f2;
+  border-radius: 24px;
+  padding: 12px 55px;
+}

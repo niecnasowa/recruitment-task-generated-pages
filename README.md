@@ -1,38 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Recruitment task for company X
 
-## Getting Started
+## Task content
 
-First, run the development server:
+![app screen](./app_screen.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+The goal of this task is to build a website in headless approach. The data should be fetched from CMS via API. The website should be built using React or Next.js.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Tips ☝️
+1. Only the homepage should be built as a part of the task
+2. Links in the header should be generated based on API data (there night be differences compared to the design)
+3. Texts and images in individual sections should be generated based on API data (there might be differences compared to the design)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## How to run the app
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+In the project directory, you can run:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### `npm run dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+I have also deployed the app to vercel, you can check it here:
 
-## Learn More
+<!-- ### [https://xxx.vercel.app/](https://xxx.vercel.app/) -->
 
-To learn more about Next.js, take a look at the following resources:
+### env variables
+This project needs env variables to work. Please check `.env.example` and add it.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Some explanations about code architecture, libraries etc. Why I decided to do some things like I did:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. App is created in `next.js`, because business wanted a headless approach. I used approach similar to gatsby, all content is generated on build time. EX. after changes in api, new build needs to be triggered. It is also possible to change it to SSR.
+2. For styling I have used scss modules, because it is really fast combination with programs that autogenerate css like `marvelapp` used to show this design.
+3. There is only one form, so I have decided to not use any forms library, in real life could use and that would improve user experience, but would also needs more time for development.
+4. I've written styles that are partially responsive. Should be ok on desktop and on some tablets. Would be easily possible to change it for full responsive, but that would need to use more of my time.
+5. I decided to fully type API, in real life would be better if API could generate types and could just import it here. As I mentioned in newsletter file, API shouldn't ask for authorization for this action, so I have decided to add 2 additional public variables, for demonstration purpose only.

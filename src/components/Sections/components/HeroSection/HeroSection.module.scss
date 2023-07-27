@@ -1,0 +1,27 @@
+.container {
+  margin: auto;
+  max-width: 1056px;
+  display: flex;
+  padding-top: 128px;
+  padding-bottom: 152px;
+  align-items: center;
+}
+
+.text {
+  width: calc((50% - (24px / 2)));
+  margin-right: 24px;
+  color: #231e1e;
+  font-size: 48px;
+  line-height: 64px;
+  width: 516px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.image {
+  width: calc((50% - (24px / 2)));
+  aspect-ratio: 4 / 3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
