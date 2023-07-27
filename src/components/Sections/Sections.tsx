@@ -7,9 +7,10 @@ import {
   NewsletterSection,
   AuthorSection,
 } from './components';
+import { SectionProps } from './components/types';
 
 type SectionComponent = {
-  [key in SectionType]: FC;
+  [key in SectionType]: FC<SectionProps>;
 };
 
 const SECTION_COMPONENT: SectionComponent = {
