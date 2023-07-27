@@ -7,6 +7,7 @@
 The goal of this task is to build a website in headless approach. The data should be fetched from CMS via API. The website should be built using React or Next.js.
 
 ### Tips ☝️
+
 1. Only the homepage should be built as a part of the task
 2. Links in the header should be generated based on API data (there night be differences compared to the design)
 3. Texts and images in individual sections should be generated based on API data (there might be differences compared to the design)
@@ -19,9 +20,10 @@ In the project directory, you can run:
 
 I have also deployed the app to vercel, you can check it here:
 
-<!-- ### [https://xxx.vercel.app/](https://xxx.vercel.app/) -->
+### [https://recruitment-task-generated-pages.vercel.app/](https://recruitment-task-generated-pages.vercel.app/)
 
 ### env variables
+
 This project needs env variables to work. Please check `.env.example` and add it.
 
 ## Some explanations about code architecture, libraries etc. Why I decided to do some things like I did:
